@@ -1,10 +1,11 @@
 import React from 'react';
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Posts from './posts';
 import About from './about';
+import Users from './users';
 import Template from './template'
 
-const Router = createBrowserRouter([
+const Router = createHashRouter([
     {
         path: "/",
         element: <Template><Posts /></Template>,
@@ -12,6 +13,10 @@ const Router = createBrowserRouter([
     {
         path: "/About",
         element: <Template><About /></Template>,
+    },
+    {
+        path: "/Users/:UserId",
+        element: <Template><Users /></Template>,
     },
 ]);
 
